@@ -1,0 +1,19 @@
+{
+    "name": "smtp_email/doctorQuan",
+    "description": "smtp方式发送邮寄需要的类",
+    "keywords": ["邮件","smtp"],
+    "authors": [
+        {
+            "name": "smtp_email",
+            "email": "1993191924@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "doctorQuan\\smtp_email\\": ""
+        }
+    }
+}
