@@ -1,5 +1,5 @@
 {
-    "name": "smtp_email/doctorQuan",
+    "name": "smtp_email/doctor-quan",
     "description": "smtp方式发送邮寄需要的类",
     "keywords": ["邮件","smtp"],
     "authors": [
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "doctorQuan\\smtp_email\\": ""
+            "doctor-quan\\smtp_email\\": ""
         }
     }
 }
