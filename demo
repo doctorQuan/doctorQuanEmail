@@ -1,0 +1,33 @@
+        $mail = new /doctorquan/smtp_email/PHPMailer/PHPMailer();
+        //$body             = file_get_contents('contents.html');
+        //$body             = eregi_replace("[\]",'',$body);
+        $mail->IsSMTP(); // telling the class to use SMTP
+        $mail->Host       = "smtp.qq.com"; // SMTP server "smtp.ym.163.com"  "smtp.qq.com"
+        $mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
+                                                                                           // 1 = errors and messages
+                                                                                           // 2 = messages only
+        $mail->SMTPAuth   = true;                  // enable SMTP authentication
+        $mail->Port       = 25;                   // set the SMTP port for the GMAIL server
+        $mail->Username   = "账号"; // SMTP account username  "zwzsreport@daili668.com"
+        $mail->Password   = "密码";        // SMTP account password
+
+        $mail->SetFrom("xxxxxx@qq.com", "夏洛克");
+
+        $mail->AddReplyTo("xxxxxx@qq.com", "夏洛克");
+
+        $mail->Subject    = "有案子要办";
+        /*$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test*/
+        $mail->MsgHTML("<h1>赶紧起来办案子了</h1>");
+        
+        $mail->AddAddress("kkkkkkk@qq.com","华生");
+
+        //$mail->AddAttachment("images/phpmailer_mini.gif"); // attachment
+
+        if(!$mail->Send()) {
+            
+        } else {
+             $mail->ErrorInfo="发送成功了";
+        }
+        return $this->render('test2', [
+            'errorinfo' => $mail->ErrorInfo,
+        ]);
