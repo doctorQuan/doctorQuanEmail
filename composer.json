@@ -8,7 +8,7 @@
             "email": "1993191924@qq.com"
         }
     ],
-	"minimum-stability": "1.0.1",
+	"minimum-stability": "dev",
     "require": {
         "php": ">=5.0.0"
     },
